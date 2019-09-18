@@ -8,6 +8,12 @@ func isValid(test: String, expression: String)-> Bool {
     return regex.firstMatch(in: test, options: [], range: NSRange(location: 0, length: test.count)) != nil
 }
 
+if isValid(test: "Devs", expression: "[A-Z]{24}") {
+    print("Valid name")
+} else {
+    print("invalid name")
+}
+
 if isValid(test: "algymussa@whatever.com", expression: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9-]+\\.[A-Za-z]{2,4}") {
     print("Valid email")
 } else {
